@@ -15,7 +15,9 @@ Initial data analysis shows that :
  In order to avoid multicollinearity within independent variables and to keep meaningful features based on domain knowledge and densities:    
  - Citric acid, pH, density and free sulfur dioxide were removed. 
  - Outliers in the densest quality classes 5, 6 and 7 were removed based on Mahalanobis distance computed in each class separately.
-   
+ 
+  ![mahalanobis_dist](mahalanobis_dist.jpg)
+  
  ## Brief summary of the machine learning models
  
 #### Random Forest Classification:
