@@ -9,14 +9,14 @@ Initial data analysis shows that :
   - Features per class have different trends and densities revealing that they don’t contribute proportionately to the target output.
   - All classes contain clearly outliers.
   
- ![tsne](tsne.PNG)
+<img src="https://imgur.com/nLWUo7Q.jpg" alt="tsne" data-canonical-src="https://imgur.com/nLWUo7Q.jpg" width="500" />
  
  ## Data preprocessing
  In order to avoid multicollinearity within independent variables and to keep meaningful features based on domain knowledge and densities:    
  - Citric acid, pH, density and free sulfur dioxide were removed. 
  - Outliers in the densest quality classes 5, 6 and 7 were removed based on Mahalanobis distance computed in each class separately.
  
-  ![mahalanobis_dist](mahalanobis_dist.jpg)
+ <img src="https://imgur.com/oC6oosV.jpg" alt="dist" data-canonical-src="https://imgur.com/oC6oosV.jpg" width="500" />
   
  ## Brief summary of the machine learning models
  
@@ -52,6 +52,7 @@ Training choices: Used a stratified 5-fold on the initial dataset. This is done 
 Evaluation method: Regarding specifically Random Forest, we check the error curve of training folds and validation folds to prevent overfitting and to find the required number of trees needed for the model to learn. For each fold and each class in both models, we compute the recall, precision and F1 score. Since we have an imbalanced dataset, these scores are then weighted by the number of class support in each fold. We use the average of these scores over the 5 folds in order to have a final accuracy and to pick the best hyperparameters. Finally a final split is made on the whole dataset in order to get a test accuracy score.
 
 ## Final results
+
 Results prove that Random Forest Classification clearly outperforms Ordinal Regression on training and validation. Although Ordinal Regression manages to reach, likely by luck, 50% False-Positive regarding the poorest class 3 in the final test, Random Forest still gives a better weighted score.
 Random Forest is known to be robust against imbalanced classes. Hence, treating this issue first improves predictions rather than considering natural ranking order in qualities.
 Over 5 folds, Ordinal Regression does not fit well on the training set, the deviance being around 3.103 . First data analysis shows that features don’t contribute proportionally to classes. Therefore, low Ordinal Regression scores are likely due to the strong assumption of proportional odds. • Regarding Random Forest, training scores show that the model did not overfit and contribute to good weighted scores on average over validation and test stages. However, looking more closely on each class highlights that the introduction of Smote Borderline into the training subset has slightly improved the performance of minority classes but does not prevent it of overfitting.
