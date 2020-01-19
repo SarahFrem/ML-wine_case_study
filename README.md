@@ -19,12 +19,12 @@ Initial data analysis shows that :
 #### Random Forest Classification:
 Supervised ensemble learning algorithm for classification.
 Based on improving single Decision Tree algorithm by constructing a multitude of trees and outputting the decision class from the mode.
-▪ Pros 
+-- Pros 
 Powerful and accurate results, good and robust performance on many problems such imbalanced data and even nonlinear problems.
 No formal distributional assumptions are needed neither data preparation. Random Forest is non-parametric and therefore, can handle skewed and multimodal data as well as categorical data and ordinal. 
 Reduce over-fitting of a single decision tree.
 The out of bags error gives a truly good idea of how well the model would fit on a test set and allows the training on the full initial dataset. 
-▪ Cons 
+-- Cons 
 Less interpretability of the model. 
 Over-fitting can easily occur, hyper parameters need to be tuned carefully. 
 Random Forest prediction process is time inefficient than other algorithms.
@@ -33,11 +33,11 @@ Random Forest prediction process is time inefficient than other algorithms.
 Supervised machine learning algorithm for ordering or ranking patterns. 
 Ordinal Regression is a member of the family of regression analyses where the dependent variable is ordinal. 
 The proportional odds model states: 𝑙𝑜𝑔𝑖𝑡 𝑃 𝑌 ≤ 𝑗 = 𝛼𝑗 − σ𝛽𝑘𝑋𝑘 where j are the levels of ordered categories and β is the common slope among categories.
-▪ Pros 
+-- Pros 
 Optimized for ordinal data. 
 Independent variables can be ordinal, categorical and continuous, giving to the model a powerful flexibility. 
 It helps to keep an observed natural order in the classes instead of treating them naively independent.
-▪ Cons 
+-- Cons 
 Requires some assumptions that are usually violated such as no-multicollinearity within features and proportional odds. 
 Fits only certain types of datasets, cannot be generalized on any dataset. 
 Model less known and interpretability can be less easy.
