@@ -9,7 +9,7 @@ Initial data analysis shows that :
   - Features per class have different trends and densities revealing that they don’t contribute proportionately to the target output.
   - All classes contain clearly outliers.
   
- ![Screenshot](corr_features.jpg)
+ ![correlation](corr_features.jpg | width=100 )
  
  ## Data preprocessing
  In order to avoid multicollinearity within independent variables and to keep meaningful features based on domain knowledge and densities:    
