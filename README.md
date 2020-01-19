@@ -9,18 +9,14 @@ Initial data analysis shows that :
   - Features per class have different trends and densities revealing that they don’t contribute proportionately to the target output.
   - All classes contain clearly outliers.
  
-<div style="text-align:center">
-  <img src="https://imgur.com/nLWUo7Q.jpg" alt="tsne" data-canonical-src="https://imgur.com/oC6oosV.jpg" width="500" />
-</div>
+<img src="https://imgur.com/nLWUo7Q.jpg" alt="tsne" data-canonical-src="https://imgur.com/oC6oosV.jpg" />
  
  ## Data preprocessing
  In order to avoid multicollinearity within independent variables and to keep meaningful features based on domain knowledge and densities:    
  - Citric acid, pH, density and free sulfur dioxide were removed. 
  - Outliers in the densest quality classes 5, 6 and 7 were removed based on Mahalanobis distance computed in each class separately.
  
-<div style="text-align:center">
-  <img src="https://imgur.com/oC6oosV.jpg" alt="dist" data-canonical-src="https://imgur.com/oC6oosV.jpg" width="500"/>
-</div>
+<img src="https://imgur.com/oC6oosV.jpg" alt="dist" data-canonical-src="https://imgur.com/oC6oosV.jpg" />
   
  ## Brief summary of the machine learning models
  
@@ -63,7 +59,5 @@ Over 5 folds, Ordinal Regression does not fit well on the training set, the devi
 In the pre-processing phase, outliers in minority classes were not removed to prevent information loss. However, any available minority outlier will have a significant effect on the model performance. This explains why in Random Forest, class 3 turns out to be the hardest minority class to predict over 5 folds. 
 Finally, Random Forest offers to the alcohol and volatile acidity compounds the highest importance and fixed acidity, residual sugar and chlorides, the lowest one. Ordinal Regression supplies a slight difference: volatile acidity remains to be the highest proportional odds coefficient on each fold whereas alcohol seems to be among the less relevant. Furthermore, total sulfur dioxide is never significant based on its p-value superior at 5%.
 
-<div style="text-align:center">
-  <img src="https://imgur.com/FZGMBMM.jpg" alt="dist" data-canonical-src="https://imgur.com/FZGMBMM.jpg" width="500"/>   
-</div>
+<img src="https://imgur.com/FZGMBMM.jpg" alt="dist" data-canonical-src="https://imgur.com/FZGMBMM.jpg" />   
 
